@@ -1,9 +1,20 @@
 # AntTracker
+
 Minimalist telemetric tracker derived from an old version of zs6buj AntTracker
-- Tracker for tracking a moving model aircraft or drone based on v0.32 of this project https://github.com/zs6buj/AntTracker
+- Tracker for tracking a moving model aircraft or drone
+- Based on v0.32 of this project https://github.com/zs6buj/AntTracker
 - Supports only Mavlink 
-This version is based on v0.32 of zs6buj Antenna tracker. The goal is to make it work properly in the following particular case :
+
+The goal of this version is to make it work properly in the following particular case :
 - STM32F1 Blue pill flashed using a ST-Link V2 programmer
-- own antenna tracker compass : cheap magnetometer QMC5883L. This library is used : https://github.com/mprograms/QMC5883LCompass
+- Own antenna tracker compass : cheap magnetometer QMC5883L. This library is used : https://github.com/mprograms/QMC5883LCompass
 - Mavlink downlink Telemetry (from QLRS in relay mode for my application, but works with all Mavlink system by changing baud)
 - 180 degres servos used for lacet (yaw/azimuth) and tangage (pitch/elevation) : a major bug is corrected in this version to manage different home heading cases
+
+To avoid common compilation problems, the used Mavlink library is in the zip file provided in this repository : unzip in your arduino/sketch directory.
+QMC5883LCompass library (https://github.com/mprograms/QMC5883LCompass) has to be installed in your arduino lib. directory.
+
+PS : 
+All this project is conform to the literary standards of the high authorities responsible for the imposed diffusion of Globish.
+If you plan to contribute, please write in good Globish (or at least in bad english)
+Thanks
