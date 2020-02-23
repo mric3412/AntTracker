@@ -11,7 +11,6 @@ The goal of this version is to make it work properly in the following particular
 - Mavlink downlink Telemetry (from QLRS in relay mode for my application, but works with all Mavlink system by changing baud)
 - 180 degres servos used for lacet (yaw/azimuth) and tangage (pitch/elevation) : a major bug is corrected in this version to manage different home heading cases
 
-To avoid common compilation problems, the used Mavlink library is in the zip file provided in this repository : unzip in your arduino/sketch directory.
-QMC5883LCompass library (https://github.com/mprograms/QMC5883LCompass) has to be installed in your arduino lib. directory.
-
-Wire library for STM32F1 with SotWire.h must be installed on your arduino IDE too (I2C/needed for compass)
+To avoid common compilation problems, the required Mavlink library is in the zip file provided in this repository : unzip in your arduino/sketch directory (e.g. AntTrackerMavlinkv0.4_QMC/).
+QMC5883LCompass library (https://github.com/mprograms/QMC5883LCompass) has to be installed in your arduino libraries directory.
+Wire library for STM32F1 with SotWire.h must be installed too on your arduino IDE (I2C/needed for compass)
