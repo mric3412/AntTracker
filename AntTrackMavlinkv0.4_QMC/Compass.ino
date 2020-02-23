@@ -31,8 +31,7 @@ float GetMagHeading() {
     z = compass.getZ();
   }
   
-  //float fHeading = RadToDeg(atan2(y, x));  //All in degrees now
-  float fHeading = RadToDeg(atan2(y, x));
+  float fHeading = RadToDeg(atan2(y, x));  //All in degrees now
   #if defined Compass_Swap_E_W
     fHeading = fHeading * -1;  //patch for my cheap and strange QMC5883 compass which inverts E and W directions
   #endif
