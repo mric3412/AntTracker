@@ -14,3 +14,10 @@ The goal of this version is to make it work properly in the following particular
 To avoid common compilation problems, the required Mavlink library is in the zip file provided in this repository : unzip in your arduino/sketch directory (e.g. AntTrackerMavlinkv0.4_QMC/).
 QMC5883LCompass library (https://github.com/mprograms/QMC5883LCompass) has to be installed in your arduino libraries directory.
 Wire library for STM32F1 with SotWire.h must be installed too on your arduino IDE (I2C/needed for compass)
+
+Modify/adapt preprocessor declarations and constants for your use case.
+By default, the provided code works with :
+- Serial Mavlink telemetry IN on Serial1
+- Serial debug on Serial2 : pins A9 and A10 connected to a FTDI adaptater connected to PC via USB (USB port not functionnal on some STM32F1 blue pills)
+- Tracker compass QMC5883 : cheap version with E and W directions inverted
+- pi radians servos witn PWM min = 600 and max = 2400 microsecondes
